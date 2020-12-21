@@ -1,0 +1,12 @@
+{% extends "eco/main.html" %}
+
+{% block content %}
+    {% for product in all_search_results %}
+        <h3>{{product.name}}</h3>
+        <img src="{{ product.image.url }}">
+    {% empty %}
+        <h2>No results found</h2>
+    {% endfor %}
+{% endblock %}
+
+ <!---<form class="form-inline my-2 my-lg-0" method="GET" action=" url = 'search'" >-->
